@@ -98,7 +98,7 @@ namespace RentApp.Migrations
                 var _appUser = context.AppUsers.FirstOrDefault(a => a.FullName == "AppUser AppUserovic");
                 var user = new RAIdentityUser() { Id = "appu", UserName = "appu", Email = "appu@yahoo.com", PasswordHash = RAIdentityUser.HashPassword("appu"), AppUserId = _appUser.Id };
                 userManager.Create(user);
-                userManager.AddToRole(user.Id, "Manager");
+                userManager.AddToRole(user.Id, "AppUser");
 
             }
 

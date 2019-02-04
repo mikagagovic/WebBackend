@@ -61,6 +61,7 @@ namespace RentApp
             container.RegisterType<IRentRepository, RentRepository>();
             container.RegisterType<ITypeOfVehicleRepository, TypeOfVehicleRepository>();
             container.RegisterType<IVehicleRepository, VehicleRepository>();
+            container.RegisterType<ICountryRepository, CountryRepository>();
             
             //kraj
             container.RegisterType<ISecureDataFormat<AuthenticationTicket>, CustomJwtFormat>(new InjectionConstructor("https://localhost:51680"));
